@@ -1,0 +1,21 @@
+com.example.studentcrudapp
+│
+├── data
+│   ├── entity
+│   │   └── Student.kt          # Defines the data model (Room Entity)
+│   ├── dao
+│   │   └── StudentDao.kt       # Data Access Object (CRUD queries)
+│   └── database
+│       └── AppDatabase.kt      # Room Database setup
+│
+├── data.repository
+│   └── StudentRepository.kt    # Provides clean API for data operations
+│
+├── viewmodel
+│   ├── StudentViewModel.kt     # Handles UI state & business logic
+│   └── StudentViewModelFactory.kt  # Factory to provide repository to ViewModel
+│
+└── ui
+    ├── components              # Reusable UI components (buttons, text fields, cards)
+    └── screens
+        └── StudentListScreen.kt  # Composable

@@ -1,0 +1,29 @@
+┌───────────────────┐
+│     UI Layer       │
+│ (Jetpack Compose) │
+│ StudentListScreen │
+└─────────┬─────────┘
+          │ User actions (Add, Update, Delete)
+          ▼
+┌───────────────────┐
+│   ViewModel Layer │
+│ StudentViewModel  │
+└─────────┬─────────┘
+          │ Calls repository functions & exposes state via Flow/State
+          ▼
+┌───────────────────┐
+│ Repository Layer  │
+│ StudentRepository │
+└─────────┬─────────┘
+          │ Performs data operations via DAO
+          ▼
+┌───────────────────┐
+│ Data Access Layer │
+│     StudentDao    │
+└─────────┬─────────┘
+          │ Executes SQL queries (Room)
+          ▼
+┌───────────────────┐
+│   Database Layer  │
+│   AppDatabase     │
+└───────────────────┘

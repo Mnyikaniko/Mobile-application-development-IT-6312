@@ -1,0 +1,41 @@
+package com.example.studentcrudapp
+
+import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.studentcrudapp.data.database.AppDatabase
+import com.example.studentcrudapp.data.repository.StudentRepository
+import com.example.studentcrudapp.ui.screens.StudentListScreen
+import com.example.studentcrudapp.viewmodel.StudentViewModel
+import com.example.studentcrudapp.viewmodel.StudentViewModelFactory
+
+class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        val dao = AppDatabase.getDatabase(this).studentDao()
+        val repository = StudentRepository(dao)
+        val factory = StudentViewModelFactory(repository)
+
+        setContent {
+            val studentViewModel: StudentViewModel = viewModel(factory = factory)
+            StudentListScreen(studentViewModel)
+        }
+    }
+}
+
+package com.example.studentcrudapp.viewmodel
+
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
+import com.example.studentcrudapp.data.repository.StudentRepository
+
+class StudentViewModelFactory(private val repository: StudentRepository) : ViewModelProvider.Factory {
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
+        if (modelClass.isAssignableFrom(StudentViewModel::class.java)) {
+            @Suppress("UNCHECKED_CAST")
+            return StudentViewModel(repository) as T
+        }
+        throw IllegalArgumentException("Unknown ViewModel class")
+    }
+}

@@ -17,9 +17,9 @@
 └─────────┬─────────┘
           │ Performs data operations via DAO
           ▼
-┌───────────────────┐
+┌───────────────────┐ //
 │ Data Access Layer │
-│     StudentDao    │
+│     StudentDao    │ 
 └─────────┬─────────┘
           │ Executes SQL queries (Room)
           ▼

@@ -4,7 +4,7 @@ import androidx.room.*
 import com.example.studentcrudapp.data.entity.Student
 import kotlinx.coroutines.flow.Flow
 
-// DAO (Data Access Object) for handling database operations for the 'students' table
+// DAO (Data Access Object) for handling database operations for the 'students' 
 @Dao
 interface StudentDao {
 

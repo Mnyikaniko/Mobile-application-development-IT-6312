@@ -9,7 +9,7 @@ interface StudentDao {
     @Query("SELECT * FROM students")
     fun getAllStudents(): Flow<List<Student>>
 
-    @Insert
+    @Insert //
     suspend fun insertStudent(student: Student)
 
     @Update

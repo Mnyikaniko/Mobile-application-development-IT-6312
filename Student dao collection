@@ -14,7 +14,7 @@ interface StudentDao {
     fun getAllStudents(): Flow<List<Student>>
 
     // Method to insert a new student into the 'students' table
-    // The suspend modifier allows this to be called from a coroutine
+    // The suspend modifier allows this to be called from 
     @Insert
     suspend fun insertStudent(student: Student)
 

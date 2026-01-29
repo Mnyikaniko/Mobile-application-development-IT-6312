@@ -16,7 +16,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // Get database instance and DAO
+        // Get database instance
         val dao = AppDatabase.getDatabase(this).studentDao()
 
         // Create repository using DAO

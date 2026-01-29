@@ -19,7 +19,7 @@ class MainActivity : ComponentActivity() {
         // Get database instance
         val dao = AppDatabase.getDatabase(this).studentDao()
 
-        // Create repository using DAO
+        // Create pository using DAO
         val repository = StudentRepository(dao)
 
         // Create ViewModel factory and pass repository

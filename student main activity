@@ -19,7 +19,7 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             val studentViewModel: StudentViewModel = viewModel(factory = factory)
-            StudentListScreen(studentViewModel)
+            StudentListScreen(studentViewModel) //
         }
     }
 }

@@ -6,7 +6,7 @@
           │ User actions (Add, Update, Delete)
           ▼
 ┌───────────────────┐
-│   ViewModel Layer │
+│   ViewModel Layer │.  
 │ StudentViewModel  │
 └─────────┬─────────┘
           │ Calls repository functions & exposes state via Flow/State

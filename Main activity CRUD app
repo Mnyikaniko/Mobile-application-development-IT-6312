@@ -1,0 +1,39 @@
+package com.example.studentcrudapp
+
+import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.studentcrudapp.data.database.AppDatabase
+import com.example.studentcrudapp.data.repository.StudentRepository
+import com.example.studentcrudapp.ui.screens.StudentListScreen
+import com.example.studentcrudapp.viewmodel.StudentViewModel
+import com.example.studentcrudapp.viewmodel.StudentViewModelFactory
+
+// Main entry point of the app
+class MainActivity : ComponentActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        // Get database instance and DAO
+        val dao = AppDatabase.getDatabase(this).studentDao()
+
+        // Create repository using DAO
+        val repository = StudentRepository(dao)
+
+        // Create ViewModel factory and pass repository
+        val factory = StudentViewModelFactory(repository)
+
+        // Set Jetpack Compose UI
+        setContent {
+
+            // Create ViewModel using factory
+            val studentViewModel: StudentViewModel =
+                viewModel(factory = factory)
+
+            // Display Student List Screen
+            StudentListScreen(studentViewModel)
+        }
+    }
+}

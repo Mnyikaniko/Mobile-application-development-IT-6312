@@ -1,0 +1,24 @@
+com.example.studentcrudapp
+│
+├── data
+│   ├── entity
+│   │   └── Student.kt
+│   │
+│   ├── dao
+│   │   └── StudentDao.kt
+│   │
+│   ├── database
+│   │   └── AppDatabase.kt
+│   │
+│   └── repository
+│       └── StudentRepository.kt
+│
+├── viewmodel
+│   ├── StudentViewModel.kt
+│   └── StudentViewModelFactory.kt
+│
+└── ui
+    ├── components
+    │
+    └── screens
+        └── StudentListScreen.kt

@@ -16,8 +16,6 @@ interface StudentDao {
     // The suspend modifier allows this to be called from 
     @Insert
     suspend fun insertStudent(student: Student)
-
-
     // The suspend modifier allows this to be called from a coroutine
     @Update
     suspend fun updateStudent(student: Student)

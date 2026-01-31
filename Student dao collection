@@ -17,7 +17,7 @@ interface StudentDao {
     @Insert
     suspend fun insertStudent(student: Student)
 
-    // Method to update an existing student in the 'students' table
+
     // The suspend modifier allows this to be called from a coroutine
     @Update
     suspend fun updateStudent(student: Student)

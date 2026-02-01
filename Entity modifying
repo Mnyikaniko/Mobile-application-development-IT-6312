@@ -14,4 +14,4 @@ data class Student(
 
     @ColumnInfo(name = "student_course")
     val course: String
-). 
+)

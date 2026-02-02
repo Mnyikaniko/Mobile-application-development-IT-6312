@@ -1,7 +1,7 @@
 package com.example.studentcrudapp.data.entity
 
 import androidx.room.Entity
-import androidx.room.PrimaryKey //key for
+import androidx.room.PrimaryKey //key 
 
 @Entity(tableName = "students")
 data class Student(

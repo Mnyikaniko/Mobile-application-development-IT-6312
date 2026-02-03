@@ -6,7 +6,7 @@ com.example.studentcrudapp
 │   ├── dao
 │   │   └── StudentDao.kt       # Data Access Object (CRUD queries)
 │   └── database
-│       └── AppDatabase.kt      # Room 
+│       └── AppDatabase.kt      
 │
 ├── data.repository
 │   └── StudentRepository.kt    # Provides clean API for data operations

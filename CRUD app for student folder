@@ -9,7 +9,7 @@ com.example.studentcrudapp
 │       └── AppDatabase.kt      
 │
 ├── data.repository
-│   └── StudentRepository.kt    # Provides clean API for data operations
+│   └── StudentRepository.kt    # Provides clean API for data 
 │
 ├── viewmodel
 │   ├── StudentViewModel.kt     # Handles UI state & business logic

@@ -2,7 +2,7 @@ com.example.studentcrudapp
 │
 ├── data
 │   ├── entity
-│   │   └── Student.kt         # Defines the data model (Room Entity)
+│   │   └── Student.kt         # Defines the data model
 │   ├── dao
 │   │   └── StudentDao.kt       # Data Access Object (CRUD queries)
 │   └── database

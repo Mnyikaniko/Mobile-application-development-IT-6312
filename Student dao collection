@@ -21,6 +21,5 @@ interface StudentDao {
     suspend fun updateStudent(student: Student)
 
     // Method to delete a student from the 'students' table
-    @Delete
     suspend fun deleteStudent(student: Student)
 }

@@ -1,0 +1,41 @@
+package com.example.studentcrudapp.data.database
+
+import android.content.Context
+import androidx.room.Database
+import androidx.room.Room
+import androidx.room.RoomDatabase
+import com.example.studentcrudapp.data.dao.StudentDao
+import com.example.studentcrudapp.data.entity.Student
+
+// Defines Room database and lists all entities (tables)
+@Database(
+    entities = [Student::class],   // Tables inside database
+    version = 1,                   // Database version
+    exportSchema = false           // Prevents schema export
+)
+abstract class AppDatabase : RoomDatabase() {
+
+    // Abstract function to access DAO
+    abstract fun studentDao(): StudentDao
+
+    companion object {
+
+        // Makes sure changes to INSTANCE are visible to all threads
+        @Volatile
+        private var INSTANCE: AppDatabase? = null
+
+        // Returns existing database or creates a new one
+        fun getDatabase(context: Context): AppDatabase {
+
+            // If INSTANCE is not null, return it
+            // Else create database inside synchronized block
+            return INSTANCE ?: synchronized(this) {
+
+                val instance = Room.databaseBuilder(
+                    context.applicationContext,   // Use application context
+                    AppDatabase::class.java,      // Database class
+                    "student_db"                  // Database name
+                )
+                .fallbackToDestructiveMigration() // Recreates DB if version changes
+                .build()
+}

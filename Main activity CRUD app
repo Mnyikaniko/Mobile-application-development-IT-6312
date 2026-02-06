@@ -10,7 +10,7 @@ import com.example.studentcrudapp.ui.screens.StudentListScreen
 import com.example.studentcrudapp.viewmodel.StudentViewModel
 import com.example.studentcrudapp.viewmodel.StudentViewModelFactory
 
-// Main entry point of the app
+// Main entry point of the 
 class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

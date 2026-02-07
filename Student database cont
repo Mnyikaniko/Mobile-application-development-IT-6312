@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import com.example.studentcrudapp.data.dao.StudentDao
 import com.example.studentcrudapp.data.entity.Student
 
-// Defines Room database and lists all 
+// Defines Room database and lists
 @Database(
     entities = [Student::class],   // Tables inside database
     version = 1,                   // Database version

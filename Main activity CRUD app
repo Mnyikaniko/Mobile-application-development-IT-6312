@@ -19,7 +19,7 @@ class MainActivity : ComponentActivity() {
         val dao = AppDatabase.getDatabase(this).studentDao()
         val repository = StudentRepository(dao)
 
-        // Create ViewModel factory and
+        // Create ViewModel factory
         val factory = StudentViewModelFactory(repository)
 
         // Set Jetpack Compose UI

@@ -15,7 +15,7 @@ import com.example.studentcrudapp.data.entity.Student
 )
 abstract class AppDatabase : RoomDatabase() {
 
-    // Abstract function to access
+    // Abstract function to 
     abstract fun studentDao(): StudentDao
 
     companion object {

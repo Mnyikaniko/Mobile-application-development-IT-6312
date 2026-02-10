@@ -27,7 +27,7 @@ abstract class AppDatabase : RoomDatabase() {
         // Returns existing database or creates a new one
         fun getDatabase(context: Context): AppDatabase {
 
-            // If INSTANCE is not null, return it
+            // If INSTANCE is not null, return
             // Else create database inside synchronized block
             return INSTANCE ?: synchronized(this) {
 

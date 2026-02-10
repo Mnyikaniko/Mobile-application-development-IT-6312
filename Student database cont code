@@ -14,8 +14,6 @@ import com.example.studentcrudapp.data.entity.Student
     exportSchema = false           // Prevents schema export
 )
 abstract class AppDatabase : RoomDatabase() {
-
-    // Abstract function to 
     abstract fun studentDao(): StudentDao
 
     companion object {

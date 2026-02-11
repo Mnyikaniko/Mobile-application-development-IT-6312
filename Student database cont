@@ -9,7 +9,7 @@ import com.example.studentcrudapp.data.entity.Student
 @Database(
     entities = [Student::class],   // Tables inside database
     version = 1,                   // Database version
-    exportSchema = false           // Prevents schema export
+    exportSchema = false           // Prevents 
 )
 abstract class AppDatabase : RoomDatabase() {
 

@@ -6,7 +6,7 @@ import kotlinx.coroutines.flow.Flow
 @Dao
 interface StudentDao {
 
-    // Query to fetch all students 
+    // Query to fetch all 
     // The result is returned as a Flow, which is a coroutine-based asynchronous stream
     @Query("SELECT * FROM students")
     fun getAllStudents(): Flow<List<Student>>

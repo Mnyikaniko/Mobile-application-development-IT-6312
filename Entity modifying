@@ -3,7 +3,7 @@ import androidx.room.ColumnInfo // comment
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "students")
+@Entity(tableName = "students") //
 data class Student(
 
     @PrimaryKey(autoGenerate = true)

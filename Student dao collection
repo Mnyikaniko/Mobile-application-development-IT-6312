@@ -8,7 +8,7 @@ interface StudentDao {
     // The result is Flow, which is a coroutine-based asynchronous stream
     @Query("SELECT * FROM students")
     fun getAllStudents(): Flow<List<Student>>
-    // Method to a new student  the 'students' table
+    // Method to a new the 'students' table
     @Insert
     suspend fun insertStudent(student: Student)
     // The suspend modifier allows this to be called from a coroutine

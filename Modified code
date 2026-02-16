@@ -1,4 +1,4 @@
-com.example.studentcrudapp
+com.example.studentcrudapp.
 ├── data
 │   ├── entity
 │   │   └── Student.kt

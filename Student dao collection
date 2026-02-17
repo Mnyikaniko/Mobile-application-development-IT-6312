@@ -5,7 +5,7 @@ import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface StudentDao {
-    // The result is Flow, which is a coroutine-based asynchronous stream
+    // The result is Flow, which is a  asynchronous stream
     @Query("SELECT * FROM students")
     fun getAllStudents(): Flow<List<Student>>
     // Method to a new the 'students' table

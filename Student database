@@ -9,7 +9,7 @@ import com.example.studentcrudapp.data.entity.Student
 
 // Defines Room database and lists all entities (tables)
 @Database(
-    entities = [Student::class],   // Tables inside database
+    entities = [Student::class],   // Tables  database
     version = 1,                   // Database version
     exportSchema = false           // Prevents schema export
 )
